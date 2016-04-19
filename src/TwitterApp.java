@@ -41,7 +41,11 @@ public class TwitterApp {
         List<String> tweets;
 
         try (BufferedReader bufferedReader = Files.newBufferedReader(tweetFilePath)) {
-            tweets = bufferedReader.lines().sorted().limit(2).collect(Collectors.toList());
+            tweets = bufferedReader
+                    .lines()
+                    .sorted()
+                    .limit(2)
+                    .collect(Collectors.toList());
             System.out.println("Allan\n");
             tweets.forEach(message -> System.out.printf("\t@%s\n\n", message));
         } catch (IOException e) {
@@ -54,7 +58,11 @@ public class TwitterApp {
         List<String> tweets;
 
         try (BufferedReader bufferedReader = Files.newBufferedReader(tweetFilePath)) {
-            tweets = bufferedReader.lines().sorted().limit(2).collect(Collectors.toList());
+            tweets = bufferedReader
+                    .lines()
+                    .sorted()
+                    .limit(2)
+                    .collect(Collectors.toList());
             System.out.println("Martin\n");
         } catch (IOException e) {
             System.out.println("File not found: " + tweetFile);
@@ -66,7 +74,10 @@ public class TwitterApp {
         List<String> tweets;
 
         try (BufferedReader bufferedReader = Files.newBufferedReader(tweetFilePath)) {
-            tweets = bufferedReader.lines().limit(3).collect(Collectors.toList());
+            tweets = bufferedReader
+                    .lines()
+                    .limit(3)
+                    .collect(Collectors.toList());
             System.out.println("Ward\n");
             tweets.forEach(message -> System.out.printf("\t@%s\n\n", message));
         } catch (IOException e) {
